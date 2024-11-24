@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>Tracking</h1>
+    </header>
+
+    <main class="tracking-main">
+        <div class="tracking-info">
+            <h2>Delivery Partner Details</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Mobile:</strong> <a href="tel:+1234567890">+1234567890</a></p>
+            <p><strong>Vehicle:</strong> ABC-1234</p>
+        </div>
+
+        <div class="map-container">
+            <h3>Live Route</h3>
+            <div id="map">
+                <!-- Placeholder for Google Maps -->
+                <img src="Images\Track.png" alt="Live Route" class="placeholder-map">
+            </div>
+        </div>
+
+        <div class="support">
+            <h3>Need Help?</h3>
+            <button onclick="openSupport()">Contact Support</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fuel Ordering System</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

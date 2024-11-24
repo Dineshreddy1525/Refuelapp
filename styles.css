@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* App Header */
+.app-header {
+    background-color: #e63946;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Station Cards */
+.station-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.station-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    aspect-ratio: 1; /* Makes the cards square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.station-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.station-card img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.station-card p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Quantity and Density Page */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 15px;
+}
+
+.center-container h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.center-container p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.center-container button {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.center-container button:hover {
+    background-color: #d62828;
+}
+
+/* Navigation Bar */
+.app-nav {
+    background-color: #e63946;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-item {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #ffc107;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .station-cards {
+        gap: 10px;
+    }
+
+    .station-card {
+        border-radius: 10px;
+    }
+
+    .app-header {
+        font-size: 20px;
+    }
+
+    .center-container h2 {
+        font-size: 18px;
+    }
+
+    .center-container p {
+        font-size: 14px;
+    }
+}

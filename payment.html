@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>Payment</h1>
+    </header>
+
+    <main class="payment-main">
+        <div class="payment-details">
+            <p><strong>Station:</strong> Shell Fuel Station</p>
+            <p><strong>Fuel Type:</strong> Petrol</p>
+            <p><strong>Quantity:</strong> 20 Liters</p>
+            <p><strong>Total Amount:</strong> ₹2000</p>
+        </div>
+
+        <button id="payNowButton">Pay Now</button>
+
+        <div class="payment-success hidden" id="paymentSuccess">
+            <img src="Images\payment.png" alt="Payment Success">
+            <h2>Payment Received!</h2>
+            <p>Redirecting to tracking...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fuel Ordering System</p>
+    </footer>
+
+    <script>
+        document.getElementById("payNowButton").addEventListener("click", function () {
+            document.getElementById("paymentSuccess").classList.remove("hidden");
+            setTimeout(() => {
+                window.location.href = "tracking.html";
+            }, 3000); // Redirect after 3 seconds
+        });
+    </script>
+</body>
+</html>
